@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>استبانة ارتباط البرامج والمقررات بسوق العمل - كلية العلوم جامعة أسيوط</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -46,6 +46,32 @@ button:disabled{opacity:.6;cursor:wait}
 #done{display:none;text-align:center;padding:40px 16px}
 #done h2{color:var(--ok);font-size:1.4rem}
 .hp{position:absolute;left:-9999px}
+html{-webkit-text-size-adjust:100%}
+body{-webkit-tap-highlight-color:transparent}
+header{padding-top:max(22px,env(safe-area-inset-top))}
+#bar{padding-top:max(8px,env(safe-area-inset-top))}
+.card{scroll-margin-top:80px}
+input[type=text],select,textarea{font-size:16px;min-height:46px}
+select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' fill='none' stroke='%238a94a6' stroke-width='2'%3E%3Cpath d='M1 1l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 14px center;padding-left:38px}
+select:disabled{opacity:.6}
+.opts span{min-height:46px;display:flex;align-items:center;justify-content:center}
+button{min-height:52px;touch-action:manipulation}
+@media(max-width:560px){
+body{padding-bottom:calc(40px + env(safe-area-inset-bottom))}
+header{padding:16px 12px 18px;padding-top:max(16px,env(safe-area-inset-top))}
+.logos{gap:12px;margin-bottom:10px}
+.logos img{height:54px;padding:4px;border-radius:8px}
+header h1{font-size:1.02rem;line-height:1.7}
+header p{font-size:.85rem}
+main{padding:12px 10px}
+.intro{font-size:.92rem;padding:10px 12px}
+.card{padding:14px 12px;border-radius:10px;margin-bottom:10px}
+.q-t{gap:8px;font-size:.98rem}
+.opts{gap:6px}
+.opts span{font-size:.95rem}
+h2{margin:20px 4px 8px}
+}
+@media(max-width:360px){.logos img{height:46px}.logos{gap:8px}}
 </style>
 </head>
 <body>
@@ -82,7 +108,7 @@ button:disabled{opacity:.6;cursor:wait}
 </main>
 <script>
 // ====== ضع هنا رابط تطبيق الويب من Google Apps Script بعد النشر ======
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwR6fJnd73Nbfbpo0NxzhBkSrj1cHRrTDXLSboyj9RohKfmUeQ7le3IdKnYB9lbeDRC/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbym_dHtoyYw93j7UXWXlEVKjp7o4gtxCKZNCBx2P8Tmkx5HwDcihdlOWKaHS4r_c_P2/exec";
 // ======================================================================
 const QS=["تساعدك المقررات التي درستها في تحديد أسباب المشكلات التي تقابلها وحلها.","ترتبط المقررات التي درستها بمشكلات المجتمع واحتياجاته.","يرتبط محتوى المقررات التي درستها بالمهارات الحياتية.","ساعدتك المقررات التي درستها على استخدام التجهيزات المتاحة في العمل.","ساعدتك المقررات التي درستها على اكتساب مهارات مواجهة الأزمات وقواعد السلامة والأمان.","ساعدتك البرامج والمقررات الدراسية على الالتزام بالقواعد المنظمة للعمل.","ساعدتك المقررات التي درستها على العمل في فريق.","أسهمت المقررات التي درستها في الالتزام بأخلاقيات المهنة.","أسهمت البرامج الدراسية في تعزيز روح العدالة والمصداقية مع فريق العمل وإدارة المؤسسة.","ساعدتك المقررات التي درستها على القدرة على التعلم الذاتي واكتساب مهارات جديدة.","ساعدتك المقررات التي درستها على التفكير العلمي المنطقي لمواجهة أية مشاكل.","ساعدتك المقررات التي درستها على اقتراح أفكار جديدة عند التعرض لأية مشكلة.","ساعدتك المقررات التي درستها على تنمية قدراتك للتواصل العالمي واستخدام شبكة المعلومات.","نمّت المقررات الدراسية الثقة بالنفس والقدرة على تحمل صعاب الحياة.","ساهمت المقررات الدراسية في تنظيم الوقت وتحديد الأولويات.","ساهمت المقررات الدراسية في وضع خططك المستقبلية وتحديد هدفك في الحياة.","ساعدتك البرامج والمقررات الدراسية على فهم كل ما هو جديد في العلوم والتكنولوجيا.","تماثل الأجهزة والمعدات التي درست عليها في الكلية نظيرتها في أماكن عملك."];
 const OPTS=["موافق","إلى حد ما","غير موافق","لا ينطبق"];
